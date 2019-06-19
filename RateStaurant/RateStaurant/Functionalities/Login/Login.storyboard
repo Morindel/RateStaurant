@@ -65,7 +65,7 @@
                                         </state>
                                         <connections>
                                             <action selector="forgotPasswordButtonClicked:" destination="nB0-mR-YJt" eventType="touchUpInside" id="SOb-XX-Jie"/>
-                                            <segue destination="quW-YO-NRG" kind="show" id="8p0-o5-0OP"/>
+                                            <segue destination="quW-YO-NRG" kind="showDetail" id="rNk-Od-CJe"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8xA-3c-jde">
@@ -81,6 +81,18 @@
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="0.0" height="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
@@ -149,10 +161,12 @@
             </objects>
             <point key="canvasLocation" x="1592.753623188406" y="-217.63392857142856"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--ForgotPassword-->
         <scene sceneID="5di-bu-iyZ">
             <objects>
-                <viewControllerPlaceholder id="quW-YO-NRG" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="ForgotPassword" id="quW-YO-NRG" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="KrW-Ok-8PA"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="51d-xo-81F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2298" y="-300"/>
