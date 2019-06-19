@@ -7,19 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13F1E8801C7CABAC1117DF30 /* Pods_RateStaurant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9518398CB1C48DA17EE06333 /* Pods_RateStaurant.framework */; };
+		306EDCA622BA368700103496 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 306EDCA522BA368700103496 /* Default-568h@2x.png */; };
+		306EDCA822BA36D900103496 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306EDCA722BA36D800103496 /* Constants.swift */; };
+		306EDCAA22BA389800103496 /* CitiesNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306EDCA922BA389800103496 /* CitiesNetworkManager.swift */; };
+		306EDCAD22BA38E500103496 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306EDCAC22BA38E500103496 /* NetworkManager.swift */; };
+		306EDCB022BA424A00103496 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 306EDCAF22BA424A00103496 /* Login.storyboard */; };
+		306EDCB322BA4B0C00103496 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306EDCB222BA4B0C00103496 /* UITextFieldExtension.swift */; };
+		306EDCB522BA4C0100103496 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306EDCB422BA4C0100103496 /* UIColorExtension.swift */; };
+		306EDCB722BA4D0C00103496 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306EDCB622BA4D0C00103496 /* LoginViewController.swift */; };
+		306EDCBA22BA4D5600103496 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306EDCB922BA4D5600103496 /* BaseViewController.swift */; };
+		306EDCBC22BA549E00103496 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306EDCBB22BA549E00103496 /* UIViewExtension.swift */; };
 		A806C3172267AA15009E80DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A806C3162267AA15009E80DE /* AppDelegate.swift */; };
-		A806C3192267AA15009E80DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A806C3182267AA15009E80DE /* ViewController.swift */; };
-		A806C31C2267AA15009E80DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A806C31A2267AA15009E80DE /* Main.storyboard */; };
 		A806C31F2267AA15009E80DE /* RateStaurant.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A806C31D2267AA15009E80DE /* RateStaurant.xcdatamodeld */; };
 		A806C3212267AA19009E80DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A806C3202267AA19009E80DE /* Assets.xcassets */; };
 		A806C3242267AA19009E80DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A806C3222267AA19009E80DE /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14E78629D744CE5A31A6C82C /* Pods-RateStaurant.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RateStaurant.release.xcconfig"; path = "Target Support Files/Pods-RateStaurant/Pods-RateStaurant.release.xcconfig"; sourceTree = "<group>"; };
+		306EDCA522BA368700103496 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		306EDCA722BA36D800103496 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		306EDCA922BA389800103496 /* CitiesNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesNetworkManager.swift; sourceTree = "<group>"; };
+		306EDCAC22BA38E500103496 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		306EDCAF22BA424A00103496 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		306EDCB222BA4B0C00103496 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
+		306EDCB422BA4C0100103496 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		306EDCB622BA4D0C00103496 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		306EDCB922BA4D5600103496 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		306EDCBB22BA549E00103496 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		5AAF59C70D6FCCE2A12CB4E3 /* Pods-RateStaurant.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RateStaurant.debug.xcconfig"; path = "Target Support Files/Pods-RateStaurant/Pods-RateStaurant.debug.xcconfig"; sourceTree = "<group>"; };
+		9518398CB1C48DA17EE06333 /* Pods_RateStaurant.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RateStaurant.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A806C3132267AA15009E80DE /* RateStaurant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RateStaurant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A806C3162267AA15009E80DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A806C3182267AA15009E80DE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A806C31B2267AA15009E80DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A806C31E2267AA15009E80DE /* RateStaurant.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RateStaurant.xcdatamodel; sourceTree = "<group>"; };
 		A806C3202267AA19009E80DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A806C3232267AA19009E80DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -31,17 +51,100 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13F1E8801C7CABAC1117DF30 /* Pods_RateStaurant.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		306EDCA122BA35EB00103496 /* Functionalities */ = {
+			isa = PBXGroup;
+			children = (
+				306EDCAE22BA421600103496 /* Login */,
+				A806C3222267AA19009E80DE /* LaunchScreen.storyboard */,
+			);
+			path = Functionalities;
+			sourceTree = "<group>";
+		};
+		306EDCA222BA35F700103496 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				306EDCAB22BA38D900103496 /* Base */,
+				306EDCA922BA389800103496 /* CitiesNetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		306EDCA322BA361900103496 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				306EDCB822BA4D4800103496 /* UIViewController */,
+				306EDCB122BA4AD700103496 /* Extension */,
+				306EDCA722BA36D800103496 /* Constants.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		306EDCA422BA361E00103496 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		306EDCAB22BA38D900103496 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				306EDCAC22BA38E500103496 /* NetworkManager.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		306EDCAE22BA421600103496 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				306EDCAF22BA424A00103496 /* Login.storyboard */,
+				306EDCB622BA4D0C00103496 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		306EDCB122BA4AD700103496 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				306EDCB222BA4B0C00103496 /* UITextFieldExtension.swift */,
+				306EDCB422BA4C0100103496 /* UIColorExtension.swift */,
+				306EDCBB22BA549E00103496 /* UIViewExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		306EDCB822BA4D4800103496 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				306EDCB922BA4D5600103496 /* BaseViewController.swift */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		51E3BFFC86E04CB345510646 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5AAF59C70D6FCCE2A12CB4E3 /* Pods-RateStaurant.debug.xcconfig */,
+				14E78629D744CE5A31A6C82C /* Pods-RateStaurant.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A806C30A2267AA15009E80DE = {
 			isa = PBXGroup;
 			children = (
+				306EDCA522BA368700103496 /* Default-568h@2x.png */,
 				A806C3152267AA15009E80DE /* RateStaurant */,
 				A806C3142267AA15009E80DE /* Products */,
+				51E3BFFC86E04CB345510646 /* Pods */,
+				D8B8BB2F3CC685CB043D6CFD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,14 +160,23 @@
 			isa = PBXGroup;
 			children = (
 				A806C3162267AA15009E80DE /* AppDelegate.swift */,
-				A806C3182267AA15009E80DE /* ViewController.swift */,
-				A806C31A2267AA15009E80DE /* Main.storyboard */,
 				A806C3202267AA19009E80DE /* Assets.xcassets */,
-				A806C3222267AA19009E80DE /* LaunchScreen.storyboard */,
-				A806C3252267AA19009E80DE /* Info.plist */,
 				A806C31D2267AA15009E80DE /* RateStaurant.xcdatamodeld */,
+				A806C3252267AA19009E80DE /* Info.plist */,
+				306EDCA122BA35EB00103496 /* Functionalities */,
+				306EDCA222BA35F700103496 /* Network */,
+				306EDCA422BA361E00103496 /* SupportingFiles */,
+				306EDCA322BA361900103496 /* Tools */,
 			);
 			path = RateStaurant;
+			sourceTree = "<group>";
+		};
+		D8B8BB2F3CC685CB043D6CFD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9518398CB1C48DA17EE06333 /* Pods_RateStaurant.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +186,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A806C3282267AA19009E80DE /* Build configuration list for PBXNativeTarget "RateStaurant" */;
 			buildPhases = (
+				3364BE8E09015B5D1A024E82 /* [CP] Check Pods Manifest.lock */,
 				A806C30F2267AA15009E80DE /* Sources */,
 				A806C3102267AA15009E80DE /* Frameworks */,
 				A806C3112267AA15009E80DE /* Resources */,
+				B2F4562DDA2EFE748DE9AD8A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -99,6 +213,7 @@
 				TargetAttributes = {
 					A806C3122267AA15009E80DE = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -126,35 +241,82 @@
 			buildActionMask = 2147483647;
 			files = (
 				A806C3242267AA19009E80DE /* LaunchScreen.storyboard in Resources */,
+				306EDCA622BA368700103496 /* Default-568h@2x.png in Resources */,
 				A806C3212267AA19009E80DE /* Assets.xcassets in Resources */,
-				A806C31C2267AA15009E80DE /* Main.storyboard in Resources */,
+				306EDCB022BA424A00103496 /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3364BE8E09015B5D1A024E82 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RateStaurant-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B2F4562DDA2EFE748DE9AD8A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RateStaurant/Pods-RateStaurant-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RateStaurant/Pods-RateStaurant-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A806C30F2267AA15009E80DE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A806C3192267AA15009E80DE /* ViewController.swift in Sources */,
+				306EDCB722BA4D0C00103496 /* LoginViewController.swift in Sources */,
+				306EDCAD22BA38E500103496 /* NetworkManager.swift in Sources */,
+				306EDCBC22BA549E00103496 /* UIViewExtension.swift in Sources */,
+				306EDCB322BA4B0C00103496 /* UITextFieldExtension.swift in Sources */,
 				A806C31F2267AA15009E80DE /* RateStaurant.xcdatamodeld in Sources */,
+				306EDCBA22BA4D5600103496 /* BaseViewController.swift in Sources */,
 				A806C3172267AA15009E80DE /* AppDelegate.swift in Sources */,
+				306EDCB522BA4C0100103496 /* UIColorExtension.swift in Sources */,
+				306EDCAA22BA389800103496 /* CitiesNetworkManager.swift in Sources */,
+				306EDCA822BA36D900103496 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		A806C31A2267AA15009E80DE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A806C31B2267AA15009E80DE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A806C3222267AA19009E80DE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -284,6 +446,7 @@
 		};
 		A806C3292267AA19009E80DE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AAF59C70D6FCCE2A12CB4E3 /* Pods-RateStaurant.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -295,13 +458,14 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = JFK.RateStaurant;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		A806C32A2267AA19009E80DE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14E78629D744CE5A31A6C82C /* Pods-RateStaurant.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -313,7 +477,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = JFK.RateStaurant;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
