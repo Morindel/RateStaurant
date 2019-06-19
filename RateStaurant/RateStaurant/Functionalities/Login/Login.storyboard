@@ -65,6 +65,7 @@
                                         </state>
                                         <connections>
                                             <action selector="forgotPasswordButtonClicked:" destination="nB0-mR-YJt" eventType="touchUpInside" id="SOb-XX-Jie"/>
+                                            <segue destination="quW-YO-NRG" kind="show" id="8p0-o5-0OP"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8xA-3c-jde">
@@ -109,6 +110,7 @@
                                         </state>
                                         <connections>
                                             <action selector="signUpButtonClicked:" destination="nB0-mR-YJt" eventType="touchUpInside" id="Zcc-sE-osN"/>
+                                            <segue destination="oxc-KA-lpQ" kind="show" id="7TK-3G-gmz"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -146,6 +148,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kOf-8C-I0Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1592.753623188406" y="-217.63392857142856"/>
+        </scene>
+        <!--Storyboard Reference-->
+        <scene sceneID="5di-bu-iyZ">
+            <objects>
+                <viewControllerPlaceholder id="quW-YO-NRG" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="51d-xo-81F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2298" y="-300"/>
+        </scene>
+        <!--Storyboard Reference-->
+        <scene sceneID="dqm-UG-Osu">
+            <objects>
+                <viewControllerPlaceholder id="oxc-KA-lpQ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8P6-u8-bJN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2315" y="-117"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cUg-9C-MZz">

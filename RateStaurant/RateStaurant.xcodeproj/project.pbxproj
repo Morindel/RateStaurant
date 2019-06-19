@@ -18,6 +18,9 @@
 		306EDCB722BA4D0C00103496 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306EDCB622BA4D0C00103496 /* LoginViewController.swift */; };
 		306EDCBA22BA4D5600103496 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306EDCB922BA4D5600103496 /* BaseViewController.swift */; };
 		306EDCBC22BA549E00103496 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306EDCBB22BA549E00103496 /* UIViewExtension.swift */; };
+		306EDCBE22BA5C3500103496 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 306EDCBD22BA5C3500103496 /* GoogleService-Info.plist */; };
+		306EDCC022BA5E7000103496 /* LoginNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306EDCBF22BA5E7000103496 /* LoginNetworkManager.swift */; };
+		306EDCC322BA64FD00103496 /* RateAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306EDCC222BA64FD00103496 /* RateAlertView.swift */; };
 		A806C3172267AA15009E80DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A806C3162267AA15009E80DE /* AppDelegate.swift */; };
 		A806C31F2267AA15009E80DE /* RateStaurant.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A806C31D2267AA15009E80DE /* RateStaurant.xcdatamodeld */; };
 		A806C3212267AA19009E80DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A806C3202267AA19009E80DE /* Assets.xcassets */; };
@@ -36,6 +39,9 @@
 		306EDCB622BA4D0C00103496 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		306EDCB922BA4D5600103496 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		306EDCBB22BA549E00103496 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		306EDCBD22BA5C3500103496 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		306EDCBF22BA5E7000103496 /* LoginNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNetworkManager.swift; sourceTree = "<group>"; };
+		306EDCC222BA64FD00103496 /* RateAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateAlertView.swift; sourceTree = "<group>"; };
 		5AAF59C70D6FCCE2A12CB4E3 /* Pods-RateStaurant.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RateStaurant.debug.xcconfig"; path = "Target Support Files/Pods-RateStaurant/Pods-RateStaurant.debug.xcconfig"; sourceTree = "<group>"; };
 		9518398CB1C48DA17EE06333 /* Pods_RateStaurant.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RateStaurant.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A806C3132267AA15009E80DE /* RateStaurant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RateStaurant.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,6 +78,7 @@
 			children = (
 				306EDCAB22BA38D900103496 /* Base */,
 				306EDCA922BA389800103496 /* CitiesNetworkManager.swift */,
+				306EDCBF22BA5E7000103496 /* LoginNetworkManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -79,6 +86,7 @@
 		306EDCA322BA361900103496 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				306EDCC122BA64E600103496 /* Alert */,
 				306EDCB822BA4D4800103496 /* UIViewController */,
 				306EDCB122BA4AD700103496 /* Extension */,
 				306EDCA722BA36D800103496 /* Constants.swift */,
@@ -128,6 +136,14 @@
 			path = UIViewController;
 			sourceTree = "<group>";
 		};
+		306EDCC122BA64E600103496 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				306EDCC222BA64FD00103496 /* RateAlertView.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
 		51E3BFFC86E04CB345510646 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +179,7 @@
 				A806C3202267AA19009E80DE /* Assets.xcassets */,
 				A806C31D2267AA15009E80DE /* RateStaurant.xcdatamodeld */,
 				A806C3252267AA19009E80DE /* Info.plist */,
+				306EDCBD22BA5C3500103496 /* GoogleService-Info.plist */,
 				306EDCA122BA35EB00103496 /* Functionalities */,
 				306EDCA222BA35F700103496 /* Network */,
 				306EDCA422BA361E00103496 /* SupportingFiles */,
@@ -242,6 +259,7 @@
 			files = (
 				A806C3242267AA19009E80DE /* LaunchScreen.storyboard in Resources */,
 				306EDCA622BA368700103496 /* Default-568h@2x.png in Resources */,
+				306EDCBE22BA5C3500103496 /* GoogleService-Info.plist in Resources */,
 				A806C3212267AA19009E80DE /* Assets.xcassets in Resources */,
 				306EDCB022BA424A00103496 /* Login.storyboard in Resources */,
 			);
@@ -282,12 +300,18 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-RateStaurant/Pods-RateStaurant-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -306,8 +330,10 @@
 				306EDCBC22BA549E00103496 /* UIViewExtension.swift in Sources */,
 				306EDCB322BA4B0C00103496 /* UITextFieldExtension.swift in Sources */,
 				A806C31F2267AA15009E80DE /* RateStaurant.xcdatamodeld in Sources */,
+				306EDCC322BA64FD00103496 /* RateAlertView.swift in Sources */,
 				306EDCBA22BA4D5600103496 /* BaseViewController.swift in Sources */,
 				A806C3172267AA15009E80DE /* AppDelegate.swift in Sources */,
+				306EDCC022BA5E7000103496 /* LoginNetworkManager.swift in Sources */,
 				306EDCB522BA4C0100103496 /* UIColorExtension.swift in Sources */,
 				306EDCAA22BA389800103496 /* CitiesNetworkManager.swift in Sources */,
 				306EDCA822BA36D900103496 /* Constants.swift in Sources */,

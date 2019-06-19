@@ -47,6 +47,17 @@ class LoginViewController : BaseViewController {
     }
     
     @IBAction func loginButtonClicked(_ sender: Any) {
+        
+        guard let email = emailTextFieldLabel.text, let password = passwordTextFieldLabel.text else {
+            return
+        }
+        
+        LoginNetworkManager.signInUser(email: email, password: password) { (error) in
+            if let error = error {
+                RateAlertView.showBasicAlert(on: self, with: "Login error", message: error.localizedDescription)
+            }
+        }
+        
     }
     
     @IBAction func signUpButtonClicked(_ sender: Any) {
