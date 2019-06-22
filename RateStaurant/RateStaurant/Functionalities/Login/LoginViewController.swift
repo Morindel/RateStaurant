@@ -52,7 +52,7 @@ class LoginViewController : BaseViewController {
             return
         }
         
-        LoginNetworkManager.signInUser(email: email, password: password) { (error) in
+        EnrollNetworkManager.signInUser(email: email, password: password) { (error) in
             if let error = error {
                 RateAlertView.showBasicAlert(on: self, with: "Login error", message: error.localizedDescription)
             }

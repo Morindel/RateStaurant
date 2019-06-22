@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rc4-Qm-0ed">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rc4-Qm-0ed">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -61,11 +61,11 @@
                                         <rect key="frame" x="254" y="0.0" width="130" height="31"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
                                         <state key="normal" title="Forgot Password?">
-                                            <color key="titleColor" red="0.26733237500000001" green="0.86997169259999996" blue="0.62111592289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" red="0.46274509803921571" green="0.85882352941176465" blue="0.63921568627450975" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                         <connections>
                                             <action selector="forgotPasswordButtonClicked:" destination="nB0-mR-YJt" eventType="touchUpInside" id="SOb-XX-Jie"/>
-                                            <segue destination="quW-YO-NRG" kind="showDetail" id="rNk-Od-CJe"/>
+                                            <segue destination="quW-YO-NRG" kind="show" id="byf-jn-TH5"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8xA-3c-jde">
@@ -86,7 +86,7 @@
                                                 <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="value" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
                                                 <size key="value" width="0.0" height="2"/>
@@ -122,7 +122,7 @@
                                         </state>
                                         <connections>
                                             <action selector="signUpButtonClicked:" destination="nB0-mR-YJt" eventType="touchUpInside" id="Zcc-sE-osN"/>
-                                            <segue destination="oxc-KA-lpQ" kind="show" id="7TK-3G-gmz"/>
+                                            <segue destination="oxc-KA-lpQ" kind="show" id="eBl-5B-J13"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -171,10 +171,10 @@
             </objects>
             <point key="canvasLocation" x="2298" y="-300"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--SignUp-->
         <scene sceneID="dqm-UG-Osu">
             <objects>
-                <viewControllerPlaceholder id="oxc-KA-lpQ" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="SignUp" storyboardName="SignUp" id="oxc-KA-lpQ" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8P6-u8-bJN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2315" y="-117"/>

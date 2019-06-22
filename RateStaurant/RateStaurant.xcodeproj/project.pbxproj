@@ -26,6 +26,9 @@
 		A806C31F2267AA15009E80DE /* RateStaurant.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A806C31D2267AA15009E80DE /* RateStaurant.xcdatamodeld */; };
 		A806C3212267AA19009E80DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A806C3202267AA19009E80DE /* Assets.xcassets */; };
 		A806C3242267AA19009E80DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A806C3222267AA19009E80DE /* LaunchScreen.storyboard */; };
+		A8FD391022BE7C5B0096BD14 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FD390F22BE7C5B0096BD14 /* ForgotPasswordViewController.swift */; };
+		A8FD391322BE8A9A0096BD14 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8FD391222BE8A9A0096BD14 /* SignUp.storyboard */; };
+		A8FD391522BE8AA80096BD14 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FD391422BE8AA80096BD14 /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +55,9 @@
 		A806C3202267AA19009E80DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A806C3232267AA19009E80DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A806C3252267AA19009E80DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8FD390F22BE7C5B0096BD14 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		A8FD391222BE8A9A0096BD14 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
+		A8FD391422BE8AA80096BD14 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				303F6A8122BA76BA00CE85E6 /* ForgotPassword.storyboard */,
+				A8FD390F22BE7C5B0096BD14 /* ForgotPasswordViewController.swift */,
 			);
 			path = ForgotPassword;
 			sourceTree = "<group>";
@@ -77,6 +84,7 @@
 		306EDCA122BA35EB00103496 /* Functionalities */ = {
 			isa = PBXGroup;
 			children = (
+				A8FD391122BE8A810096BD14 /* SignUp */,
 				303F6A8022BA768D00CE85E6 /* ForgotPassword */,
 				306EDCAE22BA421600103496 /* Login */,
 				A806C3222267AA19009E80DE /* LaunchScreen.storyboard */,
@@ -199,6 +207,15 @@
 			path = RateStaurant;
 			sourceTree = "<group>";
 		};
+		A8FD391122BE8A810096BD14 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				A8FD391222BE8A9A0096BD14 /* SignUp.storyboard */,
+				A8FD391422BE8AA80096BD14 /* SignUpViewController.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
 		D8B8BB2F3CC685CB043D6CFD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -271,6 +288,7 @@
 				A806C3242267AA19009E80DE /* LaunchScreen.storyboard in Resources */,
 				306EDCA622BA368700103496 /* Default-568h@2x.png in Resources */,
 				306EDCBE22BA5C3500103496 /* GoogleService-Info.plist in Resources */,
+				A8FD391322BE8A9A0096BD14 /* SignUp.storyboard in Resources */,
 				A806C3212267AA19009E80DE /* Assets.xcassets in Resources */,
 				303F6A8222BA76BA00CE85E6 /* ForgotPassword.storyboard in Resources */,
 				306EDCB022BA424A00103496 /* Login.storyboard in Resources */,
@@ -345,8 +363,10 @@
 				306EDCC322BA64FD00103496 /* RateAlertView.swift in Sources */,
 				306EDCBA22BA4D5600103496 /* BaseViewController.swift in Sources */,
 				A806C3172267AA15009E80DE /* AppDelegate.swift in Sources */,
+				A8FD391522BE8AA80096BD14 /* SignUpViewController.swift in Sources */,
 				306EDCC022BA5E7000103496 /* LoginNetworkManager.swift in Sources */,
 				306EDCB522BA4C0100103496 /* UIColorExtension.swift in Sources */,
+				A8FD391022BE7C5B0096BD14 /* ForgotPasswordViewController.swift in Sources */,
 				306EDCAA22BA389800103496 /* CitiesNetworkManager.swift in Sources */,
 				306EDCA822BA36D900103496 /* Constants.swift in Sources */,
 			);
@@ -424,6 +444,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -478,6 +499,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -496,7 +518,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = JFK.RateStaurant;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -515,7 +537,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = JFK.RateStaurant;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

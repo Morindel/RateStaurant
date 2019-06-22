@@ -20,5 +20,17 @@ struct RateAlertView {
         }
     }
     
+    static func showAlertWithReturnToRootControllerWithCompletion (on vc: UIViewController, with title: String, message: String, completion : @escaping () -> Void){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { _ in
+            vc.navigationController?.popToRootViewController(animated: true)
+        }))
+        
+        DispatchQueue.main.async {
+            completion()
+            vc.present(alert, animated: true)
+        }
+    }
+    
  
 }

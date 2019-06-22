@@ -9,7 +9,7 @@
 import Foundation
 import Firebase
 
-class LoginNetworkManager {
+class EnrollNetworkManager {
     
     static func signInUser( email:String, password:String, callback: @escaping (Error?) -> Void) {
         Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
@@ -20,4 +20,17 @@ class LoginNetworkManager {
             
         }
     }
+    
+    static func signUpUser(email:String, password:String, callback: @escaping (AuthDataResult?, Error?) -> Void) {
+        Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
+            if error != nil {
+                callback(nil, error)
+                return
+            }
+            callback(result, nil)
+            return
+            
+        }
+    }
+
 }
