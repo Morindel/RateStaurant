@@ -9,7 +9,7 @@
 import Foundation
 import Firebase
 
-class EnrollNetworkManager {
+class EnrollNetworkManager: NetworkManager {
     
     static func signInUser( email:String, password:String, callback: @escaping (Error?) -> Void) {
         Auth.auth().signIn(withEmail: email, password: password) { (result, error) in

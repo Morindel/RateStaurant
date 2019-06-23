@@ -28,6 +28,8 @@ class LoginViewController : BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        CategoriesNetworkManager.getRestaurantCategories()
+        
         setupTextfield()
         
         hideNavigationBar()
@@ -56,6 +58,8 @@ class LoginViewController : BaseViewController {
             if let error = error {
                 RateAlertView.showBasicAlert(on: self, with: "Login error", message: error.localizedDescription)
             }
+            
+            print("Nice")
         }
         
     }
