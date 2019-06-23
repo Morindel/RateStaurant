@@ -30,4 +30,21 @@ class ForgotPasswordViewController : BaseViewController {
     }
     
     //MARK:Actions
+    
+    @IBAction func resetPasswordButtonClicked(_ sender: Any) {
+        
+        guard let email = emailTextField.text else {
+            return
+        }
+        
+        showLoadingView(onView: self.view)
+        
+        EnrollNetworkManager.resetPassword(email: email) { (error, isCompleted) in
+            
+            RateAlertView.showAlertWithReturnToRootControllerWithCompletion(on: self, with: "Password reset successful", message: "Reset link was send to your email", completion: { [weak self] in
+                self?.removeLoadingView()
+            })
+        }
+    }
+    
 }

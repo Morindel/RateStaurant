@@ -32,5 +32,17 @@ class EnrollNetworkManager {
             
         }
     }
+    
+    static func resetPassword(email:String, callback: @escaping(Error?, Bool) -> Void) {
+        Auth.auth().sendPasswordReset(withEmail: email) { (error) in
+            if error != nil {
+                callback(error, false)
+                return
+            }
+            
+            callback(nil, true)
+            return
+        }
+    }
 
 }
