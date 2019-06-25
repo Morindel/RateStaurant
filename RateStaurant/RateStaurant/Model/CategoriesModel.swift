@@ -7,8 +7,8 @@
 //
 
 import Foundation
-
-
+import CoreData
+import UIKit
 
 struct CategoriesModel : Codable {
     let id: Int
@@ -18,18 +18,14 @@ struct CategoriesModel : Codable {
         self.id = id
         self.name = name
     }
+    
 }
 
 extension CategoriesModel {
     
     static func saveCategoriesToDatabase(categories:[CategoriesModel]) {
         
-        guard let appDelegate =
-            UIApplication.shared.delegate as? AppDelegate else {
-                return
-        }
-        
-        let context = appDelegate.persistentContainer.viewContext
+       let context = CoreDataManager.sharedManager.persistentContainer.viewContext
         
         for category in categories {
             let newCategory = NSEntityDescription.insertNewObject(forEntityName: "Category", into: context)
@@ -39,9 +35,31 @@ extension CategoriesModel {
         
         do {
             try context.save()
-            print("Success")
         } catch {
             print("Error saving: \(error)")
         }
+    }
+    
+    static func fetchAllCategories() -> NSFetchedResultsController<Category>?{
+        
+        let request = NSFetchRequest<Category>(entityName: "Category")
+        let context = CoreDataManager.sharedManager.persistentContainer.viewContext
+        let sort = NSSortDescriptor(key: #keyPath(Category.id), ascending: true)
+        request.sortDescriptors = [sort]
+        
+        let fetchedResultsController = NSFetchedResultsController(
+            fetchRequest: request,
+            managedObjectContext: context,
+            sectionNameKeyPath: nil,
+            cacheName: nil)
+        
+        do {
+            try fetchedResultsController.performFetch()
+            return fetchedResultsController
+        } catch let error as NSError {
+            print("Fetching error: \(error), \(error.userInfo)")
+        }
+
+        return nil
     }
 }

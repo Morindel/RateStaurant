@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class LoginViewController : BaseViewController {
     
@@ -23,13 +24,14 @@ class LoginViewController : BaseViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
     
+    var fetchedResultController : NSFetchedResultsController<Category>?
+    
+//    var categories = []
     //MARK:Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        CategoriesNetworkManager.getRestaurantCategories()
-        
+
         setupTextfield()
         
         hideNavigationBar()
@@ -42,6 +44,8 @@ class LoginViewController : BaseViewController {
         self.emailTextFieldLabel.addBottomBorder()
         self.passwordTextFieldLabel.addBottomBorder()
     }
+    
+    
     
     //MARK:Button Actions
     
@@ -57,10 +61,17 @@ class LoginViewController : BaseViewController {
         EnrollNetworkManager.signInUser(email: email, password: password) { (error) in
             if let error = error {
                 RateAlertView.showBasicAlert(on: self, with: "Login error", message: error.localizedDescription)
+                return
             }
             
-            print("Nice")
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "Discovery") as! DiscoveryViewController
+            self.present(vc, animated: true, completion: nil)
+//            print("Nice")
         }
+        
+        let storyboard = UIStoryboard(name: "Discovery", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "Discovery") as! DiscoveryViewController
+        self.present(vc, animated: true, completion: nil)
         
     }
     

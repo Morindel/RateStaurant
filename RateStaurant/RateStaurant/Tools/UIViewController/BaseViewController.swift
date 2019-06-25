@@ -8,12 +8,14 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class BaseViewController : UIViewController {
     
     //MARK:Properties
     
     var loadingView : UIView?
+    var managedContext: NSManagedObjectContext!
     
     //MARK:Lifecycle
     

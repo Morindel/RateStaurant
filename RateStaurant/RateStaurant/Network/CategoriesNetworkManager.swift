@@ -14,7 +14,7 @@ import SwiftyJSON
 class CategoriesNetworkManager : NetworkManager {
     
     
-    static func getRestaurantCategories() {
+    static func getRestaurantCategories(completion: @escaping (Bool) -> Void) {
         
         request("https://developers.zomato.com/api/v2.1/categories", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: Constants.API.headers).responseJSON(completionHandler: {(response) in
             
@@ -39,9 +39,11 @@ class CategoriesNetworkManager : NetworkManager {
                 }
   
                 CategoriesModel.saveCategoriesToDatabase(categories: categories)
+                completion(true)
                 return
             }
             catch let jsonError {
+                completion(false)
                 print(jsonError.localizedDescription)
                 return
                 

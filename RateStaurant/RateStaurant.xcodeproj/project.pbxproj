@@ -27,6 +27,9 @@
 		A806C3212267AA19009E80DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A806C3202267AA19009E80DE /* Assets.xcassets */; };
 		A806C3242267AA19009E80DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A806C3222267AA19009E80DE /* LaunchScreen.storyboard */; };
 		A84BF62422C25BF70056AC33 /* DiscoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84BF62322C25BF70056AC33 /* DiscoveryViewController.swift */; };
+		A84BF62822C25D830056AC33 /* DiscoveryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84BF62622C25D830056AC33 /* DiscoveryCollectionViewCell.swift */; };
+		A84BF62922C25D830056AC33 /* DiscoveryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A84BF62722C25D830056AC33 /* DiscoveryCollectionViewCell.xib */; };
+		A84BF62B22C2ABDA0056AC33 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84BF62A22C2ABDA0056AC33 /* CoreDataManager.swift */; };
 		A8FD391022BE7C5B0096BD14 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FD390F22BE7C5B0096BD14 /* ForgotPasswordViewController.swift */; };
 		A8FD391322BE8A9A0096BD14 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8FD391222BE8A9A0096BD14 /* SignUp.storyboard */; };
 		A8FD391522BE8AA80096BD14 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FD391422BE8AA80096BD14 /* SignUpViewController.swift */; };
@@ -60,6 +63,9 @@
 		A806C3232267AA19009E80DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A806C3252267AA19009E80DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A84BF62322C25BF70056AC33 /* DiscoveryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryViewController.swift; sourceTree = "<group>"; };
+		A84BF62622C25D830056AC33 /* DiscoveryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryCollectionViewCell.swift; sourceTree = "<group>"; };
+		A84BF62722C25D830056AC33 /* DiscoveryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiscoveryCollectionViewCell.xib; sourceTree = "<group>"; };
+		A84BF62A22C2ABDA0056AC33 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		A8FD390F22BE7C5B0096BD14 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		A8FD391222BE8A9A0096BD14 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		A8FD391422BE8AA80096BD14 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -214,6 +220,7 @@
 				306EDCA222BA35F700103496 /* Network */,
 				306EDCA422BA361E00103496 /* SupportingFiles */,
 				306EDCA322BA361900103496 /* Tools */,
+				A84BF62A22C2ABDA0056AC33 /* CoreDataManager.swift */,
 			);
 			path = RateStaurant;
 			sourceTree = "<group>";
@@ -221,8 +228,17 @@
 		A84BF62522C25C000056AC33 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				A84BF62622C25D830056AC33 /* DiscoveryCollectionViewCell.swift */,
+				A84BF62722C25D830056AC33 /* DiscoveryCollectionViewCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		A84BF62C22C2B2450056AC33 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 		A8FD391122BE8A810096BD14 /* SignUp */ = {
@@ -247,6 +263,7 @@
 		A8FD391B22BF9D2C0096BD14 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A84BF62C22C2B2450056AC33 /* Categories */,
 				A8FD391C22BF9D440096BD14 /* CategoriesModel.swift */,
 			);
 			path = Model;
@@ -323,6 +340,7 @@
 			files = (
 				A806C3242267AA19009E80DE /* LaunchScreen.storyboard in Resources */,
 				306EDCA622BA368700103496 /* Default-568h@2x.png in Resources */,
+				A84BF62922C25D830056AC33 /* DiscoveryCollectionViewCell.xib in Resources */,
 				306EDCBE22BA5C3500103496 /* GoogleService-Info.plist in Resources */,
 				A8FD391822BF8BBE0096BD14 /* Discovery.storyboard in Resources */,
 				A8FD391322BE8A9A0096BD14 /* SignUp.storyboard in Resources */,
@@ -397,8 +415,10 @@
 				306EDCB722BA4D0C00103496 /* LoginViewController.swift in Sources */,
 				306EDCAD22BA38E500103496 /* NetworkManager.swift in Sources */,
 				306EDCBC22BA549E00103496 /* UIViewExtension.swift in Sources */,
+				A84BF62B22C2ABDA0056AC33 /* CoreDataManager.swift in Sources */,
 				306EDCB322BA4B0C00103496 /* UITextFieldExtension.swift in Sources */,
 				A84BF62422C25BF70056AC33 /* DiscoveryViewController.swift in Sources */,
+				A84BF62822C25D830056AC33 /* DiscoveryCollectionViewCell.swift in Sources */,
 				A806C31F2267AA15009E80DE /* RateStaurant.xcdatamodeld in Sources */,
 				306EDCC322BA64FD00103496 /* RateAlertView.swift in Sources */,
 				306EDCBA22BA4D5600103496 /* BaseViewController.swift in Sources */,
