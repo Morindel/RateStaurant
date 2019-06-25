@@ -8,6 +8,7 @@ target 'RateStaurant' do
 pod 'Alamofire'
 pod 'Firebase/Core'
 pod 'Firebase/Auth'
+pod 'SwiftyJSON'
 
 
 

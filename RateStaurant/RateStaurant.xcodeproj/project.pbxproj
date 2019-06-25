@@ -26,6 +26,7 @@
 		A806C31F2267AA15009E80DE /* RateStaurant.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A806C31D2267AA15009E80DE /* RateStaurant.xcdatamodeld */; };
 		A806C3212267AA19009E80DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A806C3202267AA19009E80DE /* Assets.xcassets */; };
 		A806C3242267AA19009E80DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A806C3222267AA19009E80DE /* LaunchScreen.storyboard */; };
+		A84BF62422C25BF70056AC33 /* DiscoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84BF62322C25BF70056AC33 /* DiscoveryViewController.swift */; };
 		A8FD391022BE7C5B0096BD14 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FD390F22BE7C5B0096BD14 /* ForgotPasswordViewController.swift */; };
 		A8FD391322BE8A9A0096BD14 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8FD391222BE8A9A0096BD14 /* SignUp.storyboard */; };
 		A8FD391522BE8AA80096BD14 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FD391422BE8AA80096BD14 /* SignUpViewController.swift */; };
@@ -58,6 +59,7 @@
 		A806C3202267AA19009E80DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A806C3232267AA19009E80DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A806C3252267AA19009E80DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A84BF62322C25BF70056AC33 /* DiscoveryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryViewController.swift; sourceTree = "<group>"; };
 		A8FD390F22BE7C5B0096BD14 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		A8FD391222BE8A9A0096BD14 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		A8FD391422BE8AA80096BD14 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -216,6 +218,13 @@
 			path = RateStaurant;
 			sourceTree = "<group>";
 		};
+		A84BF62522C25C000056AC33 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		A8FD391122BE8A810096BD14 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
@@ -228,7 +237,9 @@
 		A8FD391622BF8B980096BD14 /* Discovery */ = {
 			isa = PBXGroup;
 			children = (
+				A84BF62522C25C000056AC33 /* Cells */,
 				A8FD391722BF8BBE0096BD14 /* Discovery.storyboard */,
+				A84BF62322C25BF70056AC33 /* DiscoveryViewController.swift */,
 			);
 			path = Discovery;
 			sourceTree = "<group>";
@@ -358,6 +369,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -367,6 +379,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -385,6 +398,7 @@
 				306EDCAD22BA38E500103496 /* NetworkManager.swift in Sources */,
 				306EDCBC22BA549E00103496 /* UIViewExtension.swift in Sources */,
 				306EDCB322BA4B0C00103496 /* UITextFieldExtension.swift in Sources */,
+				A84BF62422C25BF70056AC33 /* DiscoveryViewController.swift in Sources */,
 				A806C31F2267AA15009E80DE /* RateStaurant.xcdatamodeld in Sources */,
 				306EDCC322BA64FD00103496 /* RateAlertView.swift in Sources */,
 				306EDCBA22BA4D5600103496 /* BaseViewController.swift in Sources */,
