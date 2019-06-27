@@ -29,7 +29,8 @@ class DiscoveryCollectionViewCell: UICollectionViewCell {
         categoryTitle.text = category.name
         
         if let categoryName = category.name {
-         self.categoryImage.image = UIImage(named: categoryName)
+            categoryImage.image =  UIImage(named: categoryName)?.withRenderingMode(.alwaysTemplate)
+            categoryImage.tintColor = UIColor.seaColor
         }
         
     }
