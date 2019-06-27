@@ -24,12 +24,6 @@ class DiscoveryViewController: BaseViewController {
         
         downloadData()
         
-        let cellSize = CGSize(width:166 , height:166)
-        
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .vertical //.horizontal
-        layout.itemSize = cellSize
-        collectionView.setCollectionViewLayout(layout, animated: true)
 
     }
     
@@ -44,7 +38,13 @@ class DiscoveryViewController: BaseViewController {
         CategoriesNetworkManager.getRestaurantCategories { [weak self] (isSuccess) in
             if isSuccess == true {
                 self?.fetchedResultController = CategoriesModel.fetchAllCategories()
-                print(self?.fetchedResultController?.fetchedObjects)
+                do {
+                    try  self?.fetchedResultController?.performFetch()
+                } catch let error {
+                    print(error.localizedDescription)
+                }
+                print(self?.fetchedResultController?.fetchedObjects?.count)
+                //print(self?.fetchedResultController?.fetchedObjects)
                 self?.collectionView.reloadData()
             }
         }
@@ -53,6 +53,7 @@ class DiscoveryViewController: BaseViewController {
 
 extension DiscoveryViewController : UICollectionViewDataSource {
     
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if let count = fetchedResultController?.fetchedObjects?.count {
             return count

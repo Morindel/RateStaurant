@@ -26,8 +26,11 @@ class DiscoveryCollectionViewCell: UICollectionViewCell {
             return
         }
         
-//        print(category)
         categoryTitle.text = category.name
+        
+        if let categoryName = category.name {
+         self.categoryImage.image = UIImage(named: categoryName)
+        }
         
     }
 

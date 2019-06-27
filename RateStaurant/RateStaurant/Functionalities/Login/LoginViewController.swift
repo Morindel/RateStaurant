@@ -24,7 +24,6 @@ class LoginViewController : BaseViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
     
-    var fetchedResultController : NSFetchedResultsController<Category>?
     
 //    var categories = []
     //MARK:Lifecycle
@@ -58,20 +57,25 @@ class LoginViewController : BaseViewController {
             return
         }
         
-        EnrollNetworkManager.signInUser(email: email, password: password) { (error) in
-            if let error = error {
-                RateAlertView.showBasicAlert(on: self, with: "Login error", message: error.localizedDescription)
-                return
-            }
-            
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "Discovery") as! DiscoveryViewController
-            self.present(vc, animated: true, completion: nil)
-//            print("Nice")
-        }
-        
         let storyboard = UIStoryboard(name: "Discovery", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "Discovery") as! DiscoveryViewController
         self.present(vc, animated: true, completion: nil)
+        
+//        EnrollNetworkManager.signInUser(email: email, password: password) { [weak self] (error,isSuccess) in
+//            if let error = error {
+//                RateAlertView.showBasicAlert(on: self!, with: "Login error", message: error.localizedDescription)
+//                return
+//            }
+//
+//            if (isSuccess){
+//                let storyboard = UIStoryboard(name: "Discovery", bundle: nil)
+//                let vc = storyboard.instantiateViewController(withIdentifier: "Discovery") as! DiscoveryViewController
+//                self?.present(vc, animated: true, completion: nil)
+//
+//            }
+////            print("Nice")
+//        }
+        
         
     }
     

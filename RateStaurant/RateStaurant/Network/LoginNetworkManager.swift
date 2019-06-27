@@ -11,12 +11,14 @@ import Firebase
 
 class EnrollNetworkManager: NetworkManager {
     
-    static func signInUser( email:String, password:String, callback: @escaping (Error?) -> Void) {
+    static func signInUser( email:String, password:String, callback: @escaping (Error?, Bool) -> Void) {
         Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
             if error != nil {
-                callback(error)
+                callback(error, false)
                 return
             }
+            
+            callback(nil,true)
             
         }
     }

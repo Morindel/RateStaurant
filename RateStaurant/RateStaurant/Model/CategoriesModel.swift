@@ -26,18 +26,15 @@ extension CategoriesModel {
     static func saveCategoriesToDatabase(categories:[CategoriesModel]) {
         
        let context = CoreDataManager.sharedManager.persistentContainer.viewContext
-        
+
         for category in categories {
             let newCategory = NSEntityDescription.insertNewObject(forEntityName: "Category", into: context)
             newCategory.setValue(category.id, forKey: "id")
             newCategory.setValue(category.name, forKey: "name")
         }
         
-        do {
-            try context.save()
-        } catch {
-            print("Error saving: \(error)")
-        }
+        CoreDataManager.sharedManager.saveContext()
+    
     }
     
     static func fetchAllCategories() -> NSFetchedResultsController<Category>?{
@@ -46,6 +43,7 @@ extension CategoriesModel {
         let context = CoreDataManager.sharedManager.persistentContainer.viewContext
         let sort = NSSortDescriptor(key: #keyPath(Category.id), ascending: true)
         request.sortDescriptors = [sort]
+  
         
         let fetchedResultsController = NSFetchedResultsController(
             fetchRequest: request,
@@ -53,13 +51,6 @@ extension CategoriesModel {
             sectionNameKeyPath: nil,
             cacheName: nil)
         
-        do {
-            try fetchedResultsController.performFetch()
-            return fetchedResultsController
-        } catch let error as NSError {
-            print("Fetching error: \(error), \(error.userInfo)")
-        }
-
-        return nil
+        return fetchedResultsController
     }
 }
