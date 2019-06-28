@@ -42,7 +42,6 @@
 		A8FD391522BE8AA80096BD14 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FD391422BE8AA80096BD14 /* SignUpViewController.swift */; };
 		A8FD391822BF8BBE0096BD14 /* Discovery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8FD391722BF8BBE0096BD14 /* Discovery.storyboard */; };
 		A8FD391A22BF92FA0096BD14 /* CategoriesNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FD391922BF92FA0096BD14 /* CategoriesNetworkManager.swift */; };
-		A8FD391D22BF9D440096BD14 /* CategoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FD391C22BF9D440096BD14 /* CategoriesModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,7 +84,6 @@
 		A8FD391422BE8AA80096BD14 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		A8FD391722BF8BBE0096BD14 /* Discovery.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Discovery.storyboard; sourceTree = "<group>"; };
 		A8FD391922BF92FA0096BD14 /* CategoriesNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesNetworkManager.swift; sourceTree = "<group>"; };
-		A8FD391C22BF9D440096BD14 /* CategoriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -307,7 +305,6 @@
 		A8FD391B22BF9D2C0096BD14 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A8FD391C22BF9D440096BD14 /* CategoriesModel.swift */,
 				309A4AE222C632890036F885 /* LocationModel.swift */,
 				309A4AE422C633980036F885 /* LocationStorage.swift */,
 			);
@@ -457,7 +454,6 @@
 				A806C31F2267AA15009E80DE /* RateStaurant.xcdatamodeld in Sources */,
 				306EDCC322BA64FD00103496 /* RateAlertView.swift in Sources */,
 				306EDCBA22BA4D5600103496 /* BaseViewController.swift in Sources */,
-				A8FD391D22BF9D440096BD14 /* CategoriesModel.swift in Sources */,
 				309A4AE522C633980036F885 /* LocationStorage.swift in Sources */,
 				A806C3172267AA15009E80DE /* AppDelegate.swift in Sources */,
 				A8FD391522BE8AA80096BD14 /* SignUpViewController.swift in Sources */,

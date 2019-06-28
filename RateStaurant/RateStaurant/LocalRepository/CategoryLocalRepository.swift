@@ -21,7 +21,6 @@ class CategoryLocalRepository {
         let newCategory = NSEntityDescription.insertNewObject(forEntityName: "Category", into: context)
         newCategory.setValue(categoryId, forKey: "id")
         newCategory.setValue(categoryName, forKey: "name")
-        
     
     }
     
@@ -29,8 +28,9 @@ class CategoryLocalRepository {
     
     static func fetchAllCategories() -> NSFetchedResultsController<Category>?{
         
-        let request = NSFetchRequest<Category>(entityName: "Category")
         let context = CoreDataManager.sharedManager.persistentContainer.viewContext
+        
+        let request = NSFetchRequest<Category>(entityName: "Category")
         let sort = NSSortDescriptor(key: #keyPath(Category.id), ascending: true)
         request.sortDescriptors = [sort]
         
