@@ -24,9 +24,14 @@ class BaseViewController : UIViewController {
         
         removeBorderLineFromNavigationBar()
         
-        self.navigationController?.navigationBar.barTintColor = UIColor.white
+        registerNotificationForKeyboard()
         
-        self.navigationController?.navigationBar.tintColor = UIColor.greenColor
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        unregisterNotificationForKeyboard()
     }
     
     
@@ -39,25 +44,46 @@ class BaseViewController : UIViewController {
         }
         
         let storyboard = UIStoryboard(name: name, bundle: nil)
-        guard let viewControllerToBePresented = storyboard.instantiateViewController(withIdentifier: name) as? DiscoveryViewController else {
-            return
-        }
+        let viewControllerToBePresented = storyboard.instantiateViewController(withIdentifier: name)
         
         viewController.present(viewControllerToBePresented, animated: true, completion: nil)
     }
+    
+    
+    //MARK: Keyboard
+    func registerNotificationForKeyboard() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    func unregisterNotificationForKeyboard() {
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: self.view.window)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: self.view.window)
+    }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue.size {
+            if self.view.frame.origin.y == 0 {
+                self.view.frame.origin.y -= keyboardSize.height/3
+            }
+        }
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if self.view.frame.origin.y != 0 {
+            self.view.frame.origin.y = 0
+        }
+    }
 
-}
-
-//MARK: Navigation Bar
-
-extension BaseViewController {
+    
+    //MARK: Navigation Bar
     
     func hideNavigationBar() {
-           navigationController?.isNavigationBarHidden = true
+        navigationController?.isNavigationBarHidden = true
     }
     
     func showNavigationBar() {
-          navigationController?.isNavigationBarHidden = false
+        navigationController?.isNavigationBarHidden = false
     }
     
     func removeBorderLineFromNavigationBar() {
@@ -76,11 +102,7 @@ extension BaseViewController {
         self.navigationController?.navigationBar.backItem?.title = title
     }
     
-}
-
-//MARK: Loading View
-
-extension BaseViewController {
+    //MARK: Loading View
     
     func showLoadingView(onView : UIView) {
         let loadingView = UIView.init(frame: onView.bounds)

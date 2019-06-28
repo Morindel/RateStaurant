@@ -56,31 +56,31 @@ class LoginViewController : BaseViewController {
             return
         }
         
-        EnrollNetworkManager.signInUser(email: email, password: password) { [weak self] (error,state) in
-       
-            guard let viewController = self else {
-                return
-            }
-            
-            if let error = error {
-                RateAlertView.showBasicAlert(on: viewController, with: "Login error", message: error.localizedDescription)
-                return
-            }
-            
-            if (state == .failure) {
-                RateAlertView.showBasicAlert(on: viewController, with: "Login error", message: "Error occurred")
-                return
-            }
-            
-            self?.presentViewController(name: "Discovery", onViewController: self)
-        }
+         self.presentViewController(name: "Home", onViewController: self)
+        
+//        EnrollNetworkManager.signInUser(email: email, password: password) { [weak self] (error,state) in
+//
+//            guard let viewController = self else {
+//                return
+//            }
+//
+//            if let error = error {
+//                RateAlertView.showBasicAlert(on: viewController, with: "Login error", message: error.localizedDescription)
+//                return
+//            }
+//
+//            if (state == .failure) {
+//                RateAlertView.showBasicAlert(on: viewController, with: "Login error", message: "Error occurred")
+//                return
+//            }
+//
+//            self?.presentViewController(name: "Discovery", onViewController: self)
+//        }
         
     }
     
     @IBAction func signUpButtonClicked(_ sender: Any) {
     }
-    
-    
     
     
     
