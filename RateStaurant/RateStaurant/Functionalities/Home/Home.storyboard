@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Rbk-7I-ndE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,11 +13,11 @@
         <scene sceneID="ffs-LJ-cBT">
             <objects>
                 <viewControllerPlaceholder storyboardName="Discovery" id="RvK-vx-XC9" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Hus-Sq-R26"/>
+                    <navigationItem key="navigationItem" id="shi-dj-ofh"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cOg-bo-n0I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2005.7971014492755" y="223.66071428571428"/>
+            <point key="canvasLocation" x="2102.898550724638" y="259.82142857142856"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="YQQ-j0-fRa">
@@ -30,28 +30,34 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="RvK-vx-XC9" kind="relationship" relationship="viewControllers" id="MG3-H1-yux"/>
+                        <segue destination="aD7-mL-n6L" kind="relationship" relationship="viewControllers" id="ROi-Iz-kNe"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J4n-Uw-gmb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="415.94202898550731" y="260.49107142857144"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="rAo-sR-jbw">
+        <!--Test-->
+        <scene sceneID="I0Y-CE-J9m">
             <objects>
-                <navigationController id="Rbk-7I-ndE" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="biO-DN-cwa">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aD7-mL-n6L" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Test" selectedImage="Cafes" id="Hus-Sq-R26"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="q4a-NN-0oE">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="hnr-NC-XDj" kind="relationship" relationship="rootViewController" id="3yP-s1-x3f"/>
+                        <segue destination="RvK-vx-XC9" kind="relationship" relationship="rootViewController" id="3vR-IE-mRR"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6T5-L7-REA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VWE-3Y-bcL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-461" y="429"/>
+            <point key="canvasLocation" x="1192.753623188406" y="259.82142857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Cafes" width="50" height="50"/>
+    </resources>
 </document>

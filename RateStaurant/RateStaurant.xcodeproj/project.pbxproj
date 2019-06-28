@@ -26,6 +26,9 @@
 		309A4ADA22C5FA1B0036F885 /* DiscoveryTitleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 309A4AD822C5FA1B0036F885 /* DiscoveryTitleCollectionViewCell.xib */; };
 		309A4ADE22C611050036F885 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309A4ADC22C611050036F885 /* HomeViewController.swift */; };
 		309A4AE122C611430036F885 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 309A4AE022C611430036F885 /* Home.storyboard */; };
+		309A4AE322C632890036F885 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309A4AE222C632890036F885 /* LocationModel.swift */; };
+		309A4AE522C633980036F885 /* LocationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309A4AE422C633980036F885 /* LocationStorage.swift */; };
+		309A4AE822C636D40036F885 /* CategoryLocalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309A4AE722C636D40036F885 /* CategoryLocalRepository.swift */; };
 		A806C3172267AA15009E80DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A806C3162267AA15009E80DE /* AppDelegate.swift */; };
 		A806C31F2267AA15009E80DE /* RateStaurant.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A806C31D2267AA15009E80DE /* RateStaurant.xcdatamodeld */; };
 		A806C3212267AA19009E80DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A806C3202267AA19009E80DE /* Assets.xcassets */; };
@@ -62,6 +65,9 @@
 		309A4AD822C5FA1B0036F885 /* DiscoveryTitleCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiscoveryTitleCollectionViewCell.xib; sourceTree = "<group>"; };
 		309A4ADC22C611050036F885 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		309A4AE022C611430036F885 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		309A4AE222C632890036F885 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
+		309A4AE422C633980036F885 /* LocationStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationStorage.swift; sourceTree = "<group>"; };
+		309A4AE722C636D40036F885 /* CategoryLocalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryLocalRepository.swift; sourceTree = "<group>"; };
 		5AAF59C70D6FCCE2A12CB4E3 /* Pods-RateStaurant.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RateStaurant.debug.xcconfig"; path = "Target Support Files/Pods-RateStaurant/Pods-RateStaurant.debug.xcconfig"; sourceTree = "<group>"; };
 		9518398CB1C48DA17EE06333 /* Pods_RateStaurant.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RateStaurant.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A806C3132267AA15009E80DE /* RateStaurant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RateStaurant.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -215,6 +221,14 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		309A4AE622C636B60036F885 /* LocalRepository */ = {
+			isa = PBXGroup;
+			children = (
+				309A4AE722C636D40036F885 /* CategoryLocalRepository.swift */,
+			);
+			path = LocalRepository;
+			sourceTree = "<group>";
+		};
 		51E3BFFC86E04CB345510646 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,6 +266,7 @@
 				A806C3252267AA19009E80DE /* Info.plist */,
 				306EDCBD22BA5C3500103496 /* GoogleService-Info.plist */,
 				306EDCA122BA35EB00103496 /* Functionalities */,
+				309A4AE622C636B60036F885 /* LocalRepository */,
 				A8FD391B22BF9D2C0096BD14 /* Model */,
 				306EDCA222BA35F700103496 /* Network */,
 				306EDCA422BA361E00103496 /* SupportingFiles */,
@@ -268,14 +283,6 @@
 				309A4AD522C5F9E30036F885 /* Title */,
 			);
 			path = Cells;
-			sourceTree = "<group>";
-		};
-		A84BF62C22C2B2450056AC33 /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				A8FD391C22BF9D440096BD14 /* CategoriesModel.swift */,
-			);
-			path = Categories;
 			sourceTree = "<group>";
 		};
 		A8FD391122BE8A810096BD14 /* SignUp */ = {
@@ -300,7 +307,9 @@
 		A8FD391B22BF9D2C0096BD14 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A84BF62C22C2B2450056AC33 /* Categories */,
+				A8FD391C22BF9D440096BD14 /* CategoriesModel.swift */,
+				309A4AE222C632890036F885 /* LocationModel.swift */,
+				309A4AE422C633980036F885 /* LocationStorage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -449,10 +458,13 @@
 				306EDCC322BA64FD00103496 /* RateAlertView.swift in Sources */,
 				306EDCBA22BA4D5600103496 /* BaseViewController.swift in Sources */,
 				A8FD391D22BF9D440096BD14 /* CategoriesModel.swift in Sources */,
+				309A4AE522C633980036F885 /* LocationStorage.swift in Sources */,
 				A806C3172267AA15009E80DE /* AppDelegate.swift in Sources */,
 				A8FD391522BE8AA80096BD14 /* SignUpViewController.swift in Sources */,
 				306EDCC022BA5E7000103496 /* LoginNetworkManager.swift in Sources */,
 				309A4AD922C5FA1B0036F885 /* DiscoveryTitleCollectionViewCell.swift in Sources */,
+				309A4AE822C636D40036F885 /* CategoryLocalRepository.swift in Sources */,
+				309A4AE322C632890036F885 /* LocationModel.swift in Sources */,
 				306EDCB522BA4C0100103496 /* UIColorExtension.swift in Sources */,
 				A8FD391022BE7C5B0096BD14 /* ForgotPasswordViewController.swift in Sources */,
 				A8FD391A22BF92FA0096BD14 /* CategoriesNetworkManager.swift in Sources */,

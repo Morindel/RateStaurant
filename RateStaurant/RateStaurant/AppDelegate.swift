@@ -9,15 +9,20 @@
 import UIKit
 import CoreData
 import Firebase
+import CoreLocation
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    let center = UNUserNotificationCenter.current()
+    let locationManager = CLLocationManager()
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         FirebaseApp.configure()
+        locationManager.requestAlwaysAuthorization()
         
         return true
     }

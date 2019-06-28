@@ -22,24 +22,21 @@ class CategoriesNetworkManager : NetworkManager {
                 
             case .success:
                 do {
+                    
                     guard let data = response.data else {
                         return
                     }
-                    
                     let jsonArray = try JSON(data: data)
-                    var categories = [CategoriesModel]()
-                    
+        
                     var j = 0
                     while j < jsonArray["categories"].count {
-                        
                         if let categoryId = jsonArray["categories"][j]["categories"]["id"].int, let categoryName = jsonArray["categories"][j]["categories"]["name"].string {
-                            categories.append(CategoriesModel.init(id: categoryId, name: categoryName))
+                            CategoryLocalRepository.insertCategoryToDatabase(withCategoryId: categoryId, andCategoryName: categoryName)
                         }
-                        
                         j = j + 1
                     }
                     
-                    CategoriesModel.saveCategoriesToDatabase(categories: categories)
+                    CoreDataManager.sharedManager.saveContext()
                     completion(.success)
                     
                     return

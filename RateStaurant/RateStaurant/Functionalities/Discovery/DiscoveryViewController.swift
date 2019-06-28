@@ -33,6 +33,8 @@ class DiscoveryViewController: BaseViewController {
         registerCells()
         
         downloadData()
+        
+        hideNavigationBar()
     }
     
   
@@ -47,7 +49,7 @@ class DiscoveryViewController: BaseViewController {
     func downloadData(){
         CategoriesNetworkManager.getRestaurantCategories { [weak self] (state) in
             if state == .success {
-                self?.fetchedResultController = CategoriesModel.fetchAllCategories()
+                self?.fetchedResultController = CategoryLocalRepository.fetchAllCategories()
                 do {
                     try  self?.fetchedResultController?.performFetch()
                 } catch let error {
