@@ -32,19 +32,19 @@ class DiscoveryViewController: BaseViewController {
     func registerCells() {
             collectionView.register(UINib(nibName: "DiscoveryCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "DiscoveryCollectionViewCell")
     }
+    
     //MARK:Data
     
     func downloadData(){
-        CategoriesNetworkManager.getRestaurantCategories { [weak self] (isSuccess) in
-            if isSuccess == true {
+        CategoriesNetworkManager.getRestaurantCategories { [weak self] (state) in
+            if state == .success {
                 self?.fetchedResultController = CategoriesModel.fetchAllCategories()
                 do {
                     try  self?.fetchedResultController?.performFetch()
                 } catch let error {
                     print(error.localizedDescription)
                 }
-                print(self?.fetchedResultController?.fetchedObjects?.count)
-                //print(self?.fetchedResultController?.fetchedObjects)
+                
                 self?.collectionView.reloadData()
             }
         }

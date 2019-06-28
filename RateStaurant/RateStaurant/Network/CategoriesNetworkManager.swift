@@ -14,40 +14,50 @@ import SwiftyJSON
 class CategoriesNetworkManager : NetworkManager {
     
     
-    static func getRestaurantCategories(completion: @escaping (Bool) -> Void) {
+    static func getRestaurantCategories(completion: @escaping (BoolenResponse) -> Void) {
         
         request("https://developers.zomato.com/api/v2.1/categories", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: Constants.API.headers).responseJSON(completionHandler: {(response) in
             
-            guard let data = response.data else {
-                return
-            }
-            
-            do {
-                let jsonArray = try JSON(data: data)
+            switch response.result {
                 
-                var categories = [CategoriesModel]()
-                
-                
-                var j = 0
-                while j < jsonArray["categories"].count {
-                    
-                    if let categoryId = jsonArray["categories"][j]["categories"]["id"].int, let categoryName = jsonArray["categories"][j]["categories"]["name"].string {
-                        categories.append(CategoriesModel.init(id: categoryId, name: categoryName))
+            case .success:
+                do {
+                    guard let data = response.data else {
+                        return
                     }
                     
-                    j = j + 1
+                    let jsonArray = try JSON(data: data)
+                    var categories = [CategoriesModel]()
+                    
+                    var j = 0
+                    while j < jsonArray["categories"].count {
+                        
+                        if let categoryId = jsonArray["categories"][j]["categories"]["id"].int, let categoryName = jsonArray["categories"][j]["categories"]["name"].string {
+                            categories.append(CategoriesModel.init(id: categoryId, name: categoryName))
+                        }
+                        
+                        j = j + 1
+                    }
+                    
+                    CategoriesModel.saveCategoriesToDatabase(categories: categories)
+                    completion(.success)
+                    
+                    return
                 }
-  
-                CategoriesModel.saveCategoriesToDatabase(categories: categories)
-                completion(true)
-                return
-            }
-            catch let jsonError {
-                completion(false)
-                print(jsonError.localizedDescription)
-                return
+                    
+                catch let jsonError {
+                    completion(.failure)
+                    print(jsonError.localizedDescription)
+                    
+                    return
+                }
+                
+            case .failure(let error):
+                print(error.localizedDescription)
+                completion(.failure)
                 
             }
+            
         })
         
     }

@@ -24,13 +24,12 @@ class LoginViewController : BaseViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
     
-    
-//    var categories = []
+
     //MARK:Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setupTextfield()
         
         hideNavigationBar()
@@ -57,25 +56,24 @@ class LoginViewController : BaseViewController {
             return
         }
         
-        let storyboard = UIStoryboard(name: "Discovery", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "Discovery") as! DiscoveryViewController
-        self.present(vc, animated: true, completion: nil)
-        
-//        EnrollNetworkManager.signInUser(email: email, password: password) { [weak self] (error,isSuccess) in
-//            if let error = error {
-//                RateAlertView.showBasicAlert(on: self!, with: "Login error", message: error.localizedDescription)
-//                return
-//            }
-//
-//            if (isSuccess){
-//                let storyboard = UIStoryboard(name: "Discovery", bundle: nil)
-//                let vc = storyboard.instantiateViewController(withIdentifier: "Discovery") as! DiscoveryViewController
-//                self?.present(vc, animated: true, completion: nil)
-//
-//            }
-////            print("Nice")
-//        }
-        
+        EnrollNetworkManager.signInUser(email: email, password: password) { [weak self] (error,state) in
+       
+            guard let viewController = self else {
+                return
+            }
+            
+            if let error = error {
+                RateAlertView.showBasicAlert(on: viewController, with: "Login error", message: error.localizedDescription)
+                return
+            }
+            
+            if (state == .failure) {
+                RateAlertView.showBasicAlert(on: viewController, with: "Login error", message: "Error occurred")
+                return
+            }
+            
+            self?.presentViewController(name: "Discovery", onViewController: self)
+        }
         
     }
     

@@ -9,6 +9,12 @@
 import Foundation
 import Alamofire
 
+
+enum BoolenResponse {
+    case success
+    case failure
+}
+
 class NetworkManager {
     
     static var header: [String:String] {

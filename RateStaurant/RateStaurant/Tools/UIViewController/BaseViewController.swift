@@ -28,6 +28,23 @@ class BaseViewController : UIViewController {
         
         self.navigationController?.navigationBar.tintColor = UIColor.greenColor
     }
+    
+    
+    //MARK:Actions
+    
+    func presentViewController (name:String?, onViewController viewController:UIViewController?) {
+        
+        guard let name = name, let viewController = viewController else {
+            return
+        }
+        
+        let storyboard = UIStoryboard(name: name, bundle: nil)
+        guard let viewControllerToBePresented = storyboard.instantiateViewController(withIdentifier: name) as? DiscoveryViewController else {
+            return
+        }
+        
+        viewController.present(viewControllerToBePresented, animated: true, completion: nil)
+    }
 
 }
 

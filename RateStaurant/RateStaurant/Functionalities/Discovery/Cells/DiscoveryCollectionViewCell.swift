@@ -17,7 +17,6 @@ class DiscoveryCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        // Initialization code
     }
     
     func loadWithCategory(category:Category?) {

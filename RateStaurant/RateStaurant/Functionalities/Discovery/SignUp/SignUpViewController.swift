@@ -51,10 +51,14 @@ class SignUpViewController : BaseViewController {
         
         showLoadingView(onView: self.view)
         
-        EnrollNetworkManager.signUpUser(email: email, password: password) { (result, error) in
+        EnrollNetworkManager.signUpUser(email: email, password: password) { (error, state) in
             if let error = error {
                 RateAlertView.showBasicAlert(on: self, with: "Sign up error", message: error.localizedDescription)
                 return
+            }
+            
+            if state == .failure {
+                RateAlertView.showBasicAlert(on: self, with: "Sign up error", message: "Error occurred")
             }
             
             

@@ -11,40 +11,40 @@ import Firebase
 
 class EnrollNetworkManager: NetworkManager {
     
-    static func signInUser( email:String, password:String, callback: @escaping (Error?, Bool) -> Void) {
+    static func signInUser( email:String, password:String, callback: @escaping (Error?, BoolenResponse) -> Void) {
         Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
             if error != nil {
-                callback(error, false)
+                callback(error, .failure)
                 return
             }
             
-            callback(nil,true)
+            callback(nil, .success)
             
         }
     }
     
-    static func signUpUser(email:String, password:String, callback: @escaping (AuthDataResult?, Error?) -> Void) {
+    static func signUpUser(email:String, password:String, callback: @escaping (Error?, BoolenResponse) -> Void) {
         Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
             if error != nil {
-                callback(nil, error)
+                callback(error, .failure)
                 return
             }
-            callback(result, nil)
-            return
+            
+            callback(nil, .success)
             
         }
     }
     
-    static func resetPassword(email:String, callback: @escaping(Error?, Bool) -> Void) {
+    static func resetPassword(email:String, callback: @escaping (Error?, BoolenResponse) -> Void) {
         Auth.auth().sendPasswordReset(withEmail: email) { (error) in
             if error != nil {
-                callback(error, false)
+                callback(error, .failure)
                 return
             }
             
-            callback(nil, true)
-            return
+            callback(nil, .success)
+            
         }
     }
-
+    
 }
