@@ -27,7 +27,7 @@ class CategoriesNetworkManager : NetworkManager {
                         return
                     }
                     let jsonArray = try JSON(data: data)
-        
+                    
                     var j = 0
                     while j < jsonArray["categories"].count {
                         if let categoryId = jsonArray["categories"][j]["categories"]["id"].int, let categoryName = jsonArray["categories"][j]["categories"]["name"].string {

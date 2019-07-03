@@ -22,6 +22,9 @@
 		306EDCBE22BA5C3500103496 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 306EDCBD22BA5C3500103496 /* GoogleService-Info.plist */; };
 		306EDCC022BA5E7000103496 /* LoginNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306EDCBF22BA5E7000103496 /* LoginNetworkManager.swift */; };
 		306EDCC322BA64FD00103496 /* RateAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306EDCC222BA64FD00103496 /* RateAlertView.swift */; };
+		3096608E22CCCDC400A2226B /* Nearby.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3096608D22CCCDC300A2226B /* Nearby.storyboard */; };
+		3096609022CCCF9900A2226B /* RestaurantsNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3096608F22CCCF9900A2226B /* RestaurantsNetworkManager.swift */; };
+		3096609222CCD7AD00A2226B /* NearbyRestaurantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3096609122CCD7AD00A2226B /* NearbyRestaurantsViewController.swift */; };
 		309A4AD922C5FA1B0036F885 /* DiscoveryTitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309A4AD722C5FA1B0036F885 /* DiscoveryTitleCollectionViewCell.swift */; };
 		309A4ADA22C5FA1B0036F885 /* DiscoveryTitleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 309A4AD822C5FA1B0036F885 /* DiscoveryTitleCollectionViewCell.xib */; };
 		309A4ADE22C611050036F885 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309A4ADC22C611050036F885 /* HomeViewController.swift */; };
@@ -60,6 +63,9 @@
 		306EDCBD22BA5C3500103496 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		306EDCBF22BA5E7000103496 /* LoginNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNetworkManager.swift; sourceTree = "<group>"; };
 		306EDCC222BA64FD00103496 /* RateAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateAlertView.swift; sourceTree = "<group>"; };
+		3096608D22CCCDC300A2226B /* Nearby.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Nearby.storyboard; sourceTree = "<group>"; };
+		3096608F22CCCF9900A2226B /* RestaurantsNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsNetworkManager.swift; sourceTree = "<group>"; };
+		3096609122CCD7AD00A2226B /* NearbyRestaurantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyRestaurantsViewController.swift; sourceTree = "<group>"; };
 		309A4AD722C5FA1B0036F885 /* DiscoveryTitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryTitleCollectionViewCell.swift; sourceTree = "<group>"; };
 		309A4AD822C5FA1B0036F885 /* DiscoveryTitleCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiscoveryTitleCollectionViewCell.xib; sourceTree = "<group>"; };
 		309A4ADC22C611050036F885 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +116,8 @@
 		306EDCA122BA35EB00103496 /* Functionalities */ = {
 			isa = PBXGroup;
 			children = (
+				3096608C22CCCDB200A2226B /* Nearby */,
+				3096608B22CB563400A2226B /* Profile */,
 				309A4ADB22C610E40036F885 /* Home */,
 				A8FD391622BF8B980096BD14 /* Discovery */,
 				303F6A8022BA768D00CE85E6 /* ForgotPassword */,
@@ -124,6 +132,7 @@
 			children = (
 				306EDCAB22BA38D900103496 /* Base */,
 				306EDCA922BA389800103496 /* CitiesNetworkManager.swift */,
+				3096608F22CCCF9900A2226B /* RestaurantsNetworkManager.swift */,
 				306EDCBF22BA5E7000103496 /* LoginNetworkManager.swift */,
 				A8FD391922BF92FA0096BD14 /* CategoriesNetworkManager.swift */,
 			);
@@ -190,6 +199,22 @@
 				306EDCC222BA64FD00103496 /* RateAlertView.swift */,
 			);
 			path = Alert;
+			sourceTree = "<group>";
+		};
+		3096608B22CB563400A2226B /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		3096608C22CCCDB200A2226B /* Nearby */ = {
+			isa = PBXGroup;
+			children = (
+				3096608D22CCCDC300A2226B /* Nearby.storyboard */,
+				3096609122CCD7AD00A2226B /* NearbyRestaurantsViewController.swift */,
+			);
+			path = Nearby;
 			sourceTree = "<group>";
 		};
 		309A4AD522C5F9E30036F885 /* Title */ = {
@@ -385,6 +410,7 @@
 				306EDCA622BA368700103496 /* Default-568h@2x.png in Resources */,
 				A84BF62922C25D830056AC33 /* DiscoveryCollectionViewCell.xib in Resources */,
 				306EDCBE22BA5C3500103496 /* GoogleService-Info.plist in Resources */,
+				3096608E22CCCDC400A2226B /* Nearby.storyboard in Resources */,
 				A8FD391822BF8BBE0096BD14 /* Discovery.storyboard in Resources */,
 				A8FD391322BE8A9A0096BD14 /* SignUp.storyboard in Resources */,
 				309A4ADA22C5FA1B0036F885 /* DiscoveryTitleCollectionViewCell.xib in Resources */,
@@ -457,11 +483,13 @@
 				309A4AE522C633980036F885 /* LocationStorage.swift in Sources */,
 				A806C3172267AA15009E80DE /* AppDelegate.swift in Sources */,
 				A8FD391522BE8AA80096BD14 /* SignUpViewController.swift in Sources */,
+				3096609222CCD7AD00A2226B /* NearbyRestaurantsViewController.swift in Sources */,
 				306EDCC022BA5E7000103496 /* LoginNetworkManager.swift in Sources */,
 				309A4AD922C5FA1B0036F885 /* DiscoveryTitleCollectionViewCell.swift in Sources */,
 				309A4AE822C636D40036F885 /* CategoryLocalRepository.swift in Sources */,
 				309A4AE322C632890036F885 /* LocationModel.swift in Sources */,
 				306EDCB522BA4C0100103496 /* UIColorExtension.swift in Sources */,
+				3096609022CCCF9900A2226B /* RestaurantsNetworkManager.swift in Sources */,
 				A8FD391022BE7C5B0096BD14 /* ForgotPasswordViewController.swift in Sources */,
 				A8FD391A22BF92FA0096BD14 /* CategoriesNetworkManager.swift in Sources */,
 				306EDCAA22BA389800103496 /* CitiesNetworkManager.swift in Sources */,
