@@ -28,13 +28,12 @@ class CategoriesNetworkManager : NetworkManager {
                     }
                     let jsonArray = try JSON(data: data)
                     
-                    var j = 0
-                    while j < jsonArray["categories"].count {
-                        if let categoryId = jsonArray["categories"][j]["categories"]["id"].int, let categoryName = jsonArray["categories"][j]["categories"]["name"].string {
-                            CategoryLocalRepository.insertCategoryToDatabase(withCategoryId: categoryId, andCategoryName: categoryName)
-                        }
-                        j = j + 1
+          
+                    for (_,value) in jsonArray["categories"]{
+                        if let categoryId = value["categories"]["id"].int, let categoryName = value["categories"]["name"].string {
+                            CategoryLocalRepository.insertCategoryToDatabase(withCategoryId: categoryId, andCategoryName: categoryName) }
                     }
+               
                     
                     CoreDataManager.sharedManager.saveContext()
                     completion(.success)
