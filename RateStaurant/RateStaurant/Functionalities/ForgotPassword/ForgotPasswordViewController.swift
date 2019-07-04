@@ -12,6 +12,7 @@ import UIKit
 class ForgotPasswordViewController : BaseViewController {
     
     //MARK:Properties
+    
     @IBOutlet weak var emailTextField: UITextField!
     
     //MARK:Lifecycle
@@ -20,9 +21,7 @@ class ForgotPasswordViewController : BaseViewController {
         super.viewDidLoad()
         
         showNavigationBar()
-        
         setupTextField()
-        
     }
     
     func setupTextField() {
@@ -41,7 +40,7 @@ class ForgotPasswordViewController : BaseViewController {
         
         EnrollNetworkManager.resetPassword(email: email) { (error, isCompleted) in
             
-            RateAlertView.showAlertWithReturnToRootControllerWithCompletion(on: self, with: "Password reset successful", message: "Reset link was send to your email", completion: { [weak self] in
+            RateAlertView.showAlertWithReturnToRootControllerOnCompletion(on: self, with: "Password reset successful", message: "Reset link was send to your email", completion: { [weak self] in
                 self?.removeLoadingView()
             })
         }

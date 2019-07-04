@@ -31,9 +31,7 @@ class DiscoveryViewController: BaseViewController {
         super.viewDidLoad()
         
         registerCells()
-        
         downloadData()
-        
         hideNavigationBar()
     }
     

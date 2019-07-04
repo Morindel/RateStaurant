@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreData
+import SwiftyJSON
 
 class CategoryLocalRepository {
     
@@ -24,6 +25,13 @@ class CategoryLocalRepository {
     
     }
     
+//    static func insertRestaurantToDatabase(jsonObject:JSON) {
+//         let context = CoreDataManager.sharedManager.persistentContainer.viewContext
+//        
+//     //   let newRestaurant =
+//        
+//    }
+//    
     //MARK:READ
     
     static func fetchAllCategories() -> NSFetchedResultsController<Category>?{

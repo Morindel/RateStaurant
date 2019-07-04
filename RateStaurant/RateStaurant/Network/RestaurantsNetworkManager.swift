@@ -34,10 +34,9 @@ class RestauratsNetworkManager : NetworkManager {
                     let jsonArray = try JSON(data: data)
                     
                     for (_,value) in jsonArray["nearby_restaurants"] {
-                        print(value["restaurant"]["name"])
+                        print(value["restaurant"]["location"])//)["name"])
 //                        print(value)
                     }
-//                    print(jsonArray["nearby_restaurants"][1])
                     completion(.success)
                     
                     return

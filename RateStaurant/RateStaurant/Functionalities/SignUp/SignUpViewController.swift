@@ -62,7 +62,7 @@ class SignUpViewController : BaseViewController {
             }
             
             
-            RateAlertView.showAlertWithReturnToRootControllerWithCompletion(on: self, with: "Sign up successful", message: "Sign up completed, you can log in now", completion: { [weak self] in
+            RateAlertView.showAlertWithReturnToRootControllerOnCompletion(on: self, with: "Sign up successful", message: "Sign up completed, you can log in now", completion: { [weak self] in
                 self?.removeLoadingView()
             })
             
